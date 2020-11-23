@@ -11,7 +11,6 @@ inputs:
     description: The file (including optional path) to run the Terraform command against.
     required: true
     default: ./main.tf
-
 runs:
   using: docker
   image: 'docker://hashicorp/terraform:0.13.5'
