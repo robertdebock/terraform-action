@@ -1,0 +1,23 @@
+name: Test or run Terraform code
+description: Easily integrate tests into your GitHub workflow.
+author: Robert de Bock <robert@meinit.nl>
+
+inputs:
+  action:
+    description: The command to run, for example: `validate`, `init`, `plan` or `apply`.
+    required: true
+    default: validate
+  file:
+    description: The file (including optional path) to run the Terraform command against.
+    required: true
+    default: ./main.tf
+
+runs:
+  using: docker
+  image: 'docker://hashicorp/terraform:0.13.5'
+  args:
+    - ${{ inputs.action }} ${{ inputs.file }}
+
+branding:
+  icon: user-check
+  color: black
