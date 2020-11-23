@@ -28,7 +28,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: terraform
-        uses: robertdebock/terraform-action@1.0.0
+        uses: robertdebock/terraform-action@1.0.1
         with:
           action: init
           file: ./path/to/main.tf
@@ -48,7 +48,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: terraform
-        uses: robertdebock/terraform-action@1.0.0
+        uses: robertdebock/terraform-action@1.0.1
         with:
           action: init
           file: ./path/to/main.tf
