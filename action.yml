@@ -10,16 +10,18 @@ inputs:
       For example: `validate` (default), `init`, `plan` or `apply`.
     required: true
     default: validate
-  file:
+  directory:
     description: |
-      The file (including optional path) to run the Terraform command against.
+      The directory where the Terraform files can be found.
+      This defaults to `./`, but can be set to i.e. `./example`.
     required: true
-    default: ./main.tf
+    default: ./
 runs:
   using: docker
   image: 'docker://hashicorp/terraform:0.13.5'
   args:
-    - ${{ inputs.action }} ${{ inputs.file }}
+    - init ${{ inputs.directory }}
+    - ${{ inputs.action }} ${{ inputs.directory }}
 
 branding:
   icon: user-check
