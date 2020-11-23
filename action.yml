@@ -20,7 +20,8 @@ runs:
   using: docker
   image: 'docker://hashicorp/terraform:0.13.5'
   args:
-    - ${{ inputs.action }} ${{ inputs.directory }}
+    - ${{ inputs.action }}
+    - ${{ inputs.directory }}
 
 branding:
   icon: user-check
