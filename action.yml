@@ -1,3 +1,4 @@
+---
 name: Test or run Terraform code
 description: Easily integrate tests into your GitHub workflow.
 author: Robert de Bock <robert@meinit.nl>
