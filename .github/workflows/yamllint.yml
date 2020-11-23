@@ -1,5 +1,7 @@
 ---
 name: Yaml Lint
+on:
+  push:
 jobs:
   lintAllTheThings:
     runs-on: ubuntu-20.04
