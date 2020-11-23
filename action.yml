@@ -9,7 +9,7 @@ inputs:
       The command to run.
       For example: `validate` (default), `init`, `plan` or `apply`.
     required: true
-    default: validate
+    default: init
   directory:
     description: |
       The directory where the Terraform files can be found.
@@ -20,7 +20,6 @@ runs:
   using: docker
   image: 'docker://hashicorp/terraform:0.13.5'
   args:
-    - init ${{ inputs.directory }}
     - ${{ inputs.action }} ${{ inputs.directory }}
 
 branding:

@@ -6,7 +6,7 @@ A GitHub action to run HashiCorp Terraform commands.
 
 ### `action`
 
-The command to run, for example: `validate` (default), `init`, `plan` or `apply`. Have a look at `terraform --help` for details.
+The command to run, for example: `validate`, `init` (default), `plan` or `apply`. Have a look at `terraform --help` for details.
 
 ### `directory`
 
@@ -28,7 +28,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: terraform
-        uses: robertdebock/terraform-action@1.0.2
+        uses: robertdebock/terraform-action@1.0.3
 ```
 
 To use another `action` on a specific terraform directory, change this example to you needs:
@@ -45,8 +45,13 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: terraform
-        uses: robertdebock/terraform-action@1.0.2
+        uses: robertdebock/terraform-action@1.0.3
         with:
           action: init
+          directory: ./example
+      - name: terraform
+        uses: robertdebock/terraform-action@1.0.3
+        with:
+          action: validate
           directory: ./example
 ```
