@@ -5,11 +5,14 @@ author: Robert de Bock <robert@meinit.nl>
 
 inputs:
   action:
-    description: The command to run, for example: `validate`, `init`, `plan` or `apply`.
+    description: |
+      The command to run.
+      For example: `validate` (default), `init`, `plan` or `apply`.
     required: true
     default: validate
   file:
-    description: The file (including optional path) to run the Terraform command against.
+    description: |
+      The file (including optional path) to run the Terraform command against.
     required: true
     default: ./main.tf
 runs:
