@@ -3,9 +3,9 @@ name: Yaml Lint
 on:
   push:
 jobs:
-  lintAllTheThings:
+  yamllint:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-      - name: yaml-lint
+      - name: yamllint
         uses: ibiqlik/action-yamllint@v3
