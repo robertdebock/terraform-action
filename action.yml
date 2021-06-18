@@ -21,7 +21,7 @@ runs:
   image: 'docker://hashicorp/terraform:1.0.0'
   args:
     - ${{ inputs.action }}
-    - ${{ inputs.directory }}
+    - -chdir ${{ inputs.directory }}
 
 branding:
   icon: user-check
