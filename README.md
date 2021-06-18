@@ -28,7 +28,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: terraform
-        uses: robertdebock/terraform-action@1.0.7
+        uses: robertdebock/terraform-action@1.1.0
 ```
 
 To use another `action` on a specific terraform directory, change this example to you needs:
@@ -45,12 +45,12 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: terraform
-        uses: robertdebock/terraform-action@1.0.8
+        uses: robertdebock/terraform-action@1.1.0
         with:
           action: init
           directory: ./example
       - name: terraform
-        uses: robertdebock/terraform-action@1.0.8
+        uses: robertdebock/terraform-action@1.1.0
         with:
           action: validate
           directory: ./example
