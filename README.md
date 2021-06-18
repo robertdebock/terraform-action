@@ -45,12 +45,12 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: terraform
-        uses: robertdebock/terraform-action@1.0.7
+        uses: robertdebock/terraform-action@1.0.8
         with:
           action: init
           directory: ./example
       - name: terraform
-        uses: robertdebock/terraform-action@1.0.7
+        uses: robertdebock/terraform-action@1.0.8
         with:
           action: validate
           directory: ./example
