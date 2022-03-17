@@ -44,14 +44,26 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: terraform
+      - name: terraform init
         uses: robertdebock/terraform-action@1.1.2
         with:
           action: init
           directory: ./example
-      - name: terraform
+      - name: terraform validate
         uses: robertdebock/terraform-action@1.1.2
         with:
           action: validate
           directory: ./example
+      - name: terraform plan
+        uses: robertdebock/terraform-action@1.1.2
+        with:
+          action: plan
+          directory: ./example
+      - name: terraform apply
+        uses: robertdebock/terraform-action@1.1.2
+        with:
+          action: apply
+          directory: ./example
+        env:
+          TF_CLI_ARGS: "-input=false -auto-approve"
 ```
