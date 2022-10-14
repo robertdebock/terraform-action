@@ -18,7 +18,7 @@ inputs:
     default: ./
 runs:
   using: docker
-  image: 'docker://robertdebock/terraform:1.0.3'
+  image: 'docker://robertdebock/terraform:1.0.4'
   args:
     - -chdir=${{ inputs.directory }}
     - ${{ inputs.action }}
